@@ -1,0 +1,59 @@
+/* Center content and set base typography */
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --accent: #1f2937;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem;
+  gap:1.25rem;
+}
+
+/* Heading: big & bold */
+.title{
+  font-size:3.25rem; /* big */
+  font-weight:800;   /* bold */
+  margin:0;
+  line-height:1.05;
+  color:var(--accent);
+}
+
+/* Short description: large readable font */
+.lead{
+  font-size:1.25rem; /* large but smaller than heading */
+  max-width:60ch;
+  margin:0;
+  color:rgba(17,24,39,0.9);
+}
+
+/* Image styling */
+.hero-image{
+  width:100%;
+  max-width:640px;
+  height:auto;
+  display:block;
+  margin-top:0.5rem;
+  border-radius:8px;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.08);
+}
+
+/* Responsive tweaks */
+@media (min-width:900px){
+  .title{ font-size:4rem; }
+  .lead{ font-size:1.375rem; }
+}
