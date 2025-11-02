@@ -266,6 +266,9 @@ function staticFileResponse(res, filePath) {
         case '.csv':
             contentType = 'text/csv';
             break;
+        case '.txt':
+            contentType = 'text/plain';
+            break;
         default: // Fall back to octet stream
             contentType = 'application/octet-stream';
             break;
